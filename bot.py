@@ -3,7 +3,11 @@
 
 from aiogram import Bot, Dispatcher, executor, types
 import os
-token_telegram = '5684557515:AAGKAHKtToijdgM1S_X5tTE48pGeXHSQu2g'
+
+from dotenv import load_dotenv
+
+load_dotenv()
+token_telegram = os.getenv('TOKEN') 
 
 
 bot = Bot(token=token_telegram)
